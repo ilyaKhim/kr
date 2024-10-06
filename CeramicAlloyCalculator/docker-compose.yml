@@ -1,0 +1,15 @@
+﻿version: '3.7'
+services:
+  cac-db:
+    container_name: cac-db
+    image: postgres:14.5-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=pwd
+        
+volumes:
+  pgdata:
