@@ -48,7 +48,7 @@ public partial class ResearcherForm : Form
         _tMaxInput.Size = new Size(150, 50);
         _tMaxInput.Minimum = -250;
         _tMaxInput.Maximum = 9000;
-        _tMaxInput.Value = 1550;
+        _tMaxInput.Value = 1500;
         Controls.Add(_tMaxInput);
         
         var tDeltaLabel = new Label();
@@ -78,7 +78,7 @@ public partial class ResearcherForm : Form
         _pgMinInput.Size = new Size(150, 50);
         _pgMinInput.Minimum = 1;
         _pgMinInput.Maximum = 900;
-        _pgMinInput.Value = 30;
+        _pgMinInput.Value = 40;
         Controls.Add(_pgMinInput);
         
         var pgMaxLabel = new Label();
@@ -92,7 +92,7 @@ public partial class ResearcherForm : Form
         _pgMaxInput.Size = new Size(150, 50);
         _pgMaxInput.Minimum = 1;
         _pgMaxInput.Maximum = 900;
-        _pgMaxInput.Value = 60;
+        _pgMaxInput.Value = 80;
         Controls.Add(_pgMaxInput);
         
         var pgDeltaLabel = new Label();

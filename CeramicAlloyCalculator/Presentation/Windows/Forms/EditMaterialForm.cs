@@ -65,7 +65,7 @@ public partial class EditMaterialForm : Form
         _b1Input.DecimalPlaces = 8;
         _b1Input.Minimum = -90000;
         _b1Input.Maximum = 90000;
-        _b1Input.Value = Convert.ToDecimal(materialEntity.a1);
+        _b1Input.Value = Convert.ToDecimal(materialEntity.b1);
         Controls.Add(_b1Input);
         
         var b2Label = new Label();

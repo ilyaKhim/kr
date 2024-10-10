@@ -33,7 +33,7 @@ public partial class ChartForm : Form
             },
             AxisY = new Axis()
             {
-                Title = "σ (%)"
+                Title = "σ (МПа)"
             }
         });
         Controls.Add(_chart);

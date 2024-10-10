@@ -16,9 +16,9 @@ public class DataExporter
         string[,] rows = new string[calculationResult.ts.Count + 1,calculationResult.pgs.Count + 1];
 
         var i = 1;
-        foreach (var tau in calculationResult.pgs)
+        foreach (var pg in calculationResult.pgs)
         {
-            rows[0, i] = tau.ToString();
+            rows[0, i] = pg.ToString();
             i++;
         }
 

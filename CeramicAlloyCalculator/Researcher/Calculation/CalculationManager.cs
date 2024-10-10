@@ -36,9 +36,9 @@ public class CalculationManager
 
     public double CalculateSolidity(MaterialEntity material, double t, double pg)
     {
-        return material.b0 + material.b1 * t + material.b2 * pg +
-               material.b3 * t * pg + material.b4 * Math.Pow(t, 2) + material.b5 * Math.Pow(pg, 2) +
-               material.b6 * Math.Pow(t, 2) * pg + material.b7 * t * Math.Pow(pg, 2) +
+        return material.b0 + material.b1 * pg + material.b2 * t +
+               material.b3 * t * pg + material.b4 * Math.Pow(pg, 2) + material.b5 * Math.Pow(t, 2) +
+               material.b6 * Math.Pow(pg, 2) * t + material.b7 * pg * Math.Pow(t, 2) +
                material.b8 * Math.Pow(t, 2) * Math.Pow(pg, 2);
     }
 }
