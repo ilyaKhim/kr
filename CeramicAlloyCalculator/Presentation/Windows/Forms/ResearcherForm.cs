@@ -123,13 +123,6 @@ public partial class ResearcherForm : Form
         _calculateButton.Location = new Point(15, 260);
         _calculateButton.Click += OnCalculateButtonClick;
         Controls.Add(_calculateButton);
-
-        _logEntity = new LogEntity();
-        _logEntity.user_id = Session.CurrentUserId;
-        _logEntity.material_id = _materialEntity.id;
-        _logEntity.Event = "Расчёт прочности для материала " + _materialEntity.name;
-        var logManager = new LogManager(new DatabaseApplicationContext());
-        logManager.SaveLog(_logEntity);
     }
 
     public void OnCalculateButtonClick(object sender, EventArgs eventArgs)
@@ -160,6 +153,12 @@ public partial class ResearcherForm : Form
         chartForm.Show();
         
         SetLockStatus(false);
+        _logEntity = new LogEntity();
+        _logEntity.user_id = Session.CurrentUserId;
+        _logEntity.material_id = material.id;
+        _logEntity.Event = "Расчёт прочности для материала " + material.name;
+        var logManager = new LogManager(new DatabaseApplicationContext());
+        logManager.SaveLog(_logEntity);
     }
 
     
