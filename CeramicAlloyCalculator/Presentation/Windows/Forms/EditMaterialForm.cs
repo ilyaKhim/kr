@@ -201,7 +201,7 @@ public partial class EditMaterialForm : Form
         _logEntity = new LogEntity();
         _logEntity.user_id = Session.CurrentUserId;
         _logEntity.material_id = _materialEntity.id;
-        _logEntity.Event = "Создание нового материала " + _materialEntity.name;
+        _logEntity.Event = "Создание нового/редактирование материала " + _materialEntity.name;
         var logManager = new LogManager(new DatabaseApplicationContext());
         logManager.SaveLog(_logEntity);
         

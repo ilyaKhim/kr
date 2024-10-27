@@ -10,6 +10,7 @@ namespace CeramicAlloyCalculator;
 public partial class ResearcherForm : Form
 {
     private readonly NumericUpDown _tMinInput, _tMaxInput, _tDeltaInput, _pgMinInput, _pgMaxInput, _pgDeltaInput;
+    private LogEntity _logEntity;
     private readonly Button _calculateButton;
     private readonly ComboBox _materialSelect;
     private readonly MaterialListManager _materialListManager = new(new DatabaseApplicationContext());
@@ -122,6 +123,13 @@ public partial class ResearcherForm : Form
         _calculateButton.Location = new Point(15, 260);
         _calculateButton.Click += OnCalculateButtonClick;
         Controls.Add(_calculateButton);
+
+        _logEntity = new LogEntity();
+        _logEntity.user_id = Session.CurrentUserId;
+        _logEntity.material_id = _materialEntity.id;
+        _logEntity.Event = "Расчёт прочности для материала " + _materialEntity.name;
+        var logManager = new LogManager(new DatabaseApplicationContext());
+        logManager.SaveLog(_logEntity);
     }
 
     public void OnCalculateButtonClick(object sender, EventArgs eventArgs)
