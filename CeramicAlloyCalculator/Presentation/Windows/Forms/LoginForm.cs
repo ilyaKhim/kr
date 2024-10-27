@@ -89,6 +89,7 @@ public partial class LoginForm : Form
                 SetLockFormStatus(false);
             };
         }
+        Session.CurrentUserId = user.id;
     }
 
     private void OnPasswordKeyUp(object sender, KeyEventArgs eventArgs)

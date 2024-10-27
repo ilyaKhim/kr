@@ -7,7 +7,8 @@ public class DatabaseApplicationContext : DbContext
 {
     public DbSet<MaterialEntity> materials { get; set; }
     public DbSet<UserEntity> users { get; set; }
-    
+    public DbSet<LogEntity> logs { get; set; }
+
     public DatabaseApplicationContext()
     {
         Database.EnsureCreated();
