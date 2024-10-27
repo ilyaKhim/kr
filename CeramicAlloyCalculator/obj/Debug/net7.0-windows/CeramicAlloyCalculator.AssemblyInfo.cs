@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CeramicAlloyCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d834b17dcda9f1da9d3f2ef1898315a239424cc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b301d60948029e98da417f82383f9ea42d9f5f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CeramicAlloyCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CeramicAlloyCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
