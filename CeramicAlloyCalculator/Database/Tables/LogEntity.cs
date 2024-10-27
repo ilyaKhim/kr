@@ -16,16 +16,20 @@ public class LogEntity
     [ForeignKey("User")]
     [Column("user_id")]
     public int user_id { get; set; }
-    public UserEntity User { get; set; }
+    public UserEntity User { get; set; } = null;
 
     [ForeignKey("Material")]
     [Column("material_id")]
     public int material_id { get; set; }
-    public MaterialEntity Material { get; set; }
+    public MaterialEntity Material { get; set; } = null;
 
     [Column("event")]
     public string Event { get; set; }
 
     [Column("event_date")]
-    public DateTime EventDate { get; set; } = DateTime.Now;
+    public DateTime EventDate { get; set; } = DateTime.UtcNow;
+
+    public LogEntity()
+    {
+    }
 }

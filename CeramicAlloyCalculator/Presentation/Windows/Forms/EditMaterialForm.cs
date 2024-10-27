@@ -8,7 +8,7 @@ namespace CeramicAlloyCalculator;
 public partial class EditMaterialForm : Form
 {
     private readonly MaterialEntity _materialEntity;
-    private readonly LogEntity _logEntity;
+    private LogEntity _logEntity;
     private readonly AdministratorForm _administratorForm;
     private TextBox _nameInput;
 
@@ -198,10 +198,10 @@ public partial class EditMaterialForm : Form
         var materialListManager = new MaterialListManager(new DatabaseApplicationContext());
         materialListManager.SaveMaterial(_materialEntity);
 
+        _logEntity = new LogEntity();
         _logEntity.user_id = Session.CurrentUserId;
         _logEntity.material_id = _materialEntity.id;
-        _logEntity.event = "Создание нового материала " + _materialEntity.name;
-        _logEntity.eventDate = DateTime.Now;
+        _logEntity.Event = "Создание нового материала " + _materialEntity.name;
         var logManager = new LogManager(new DatabaseApplicationContext());
         logManager.SaveLog(_logEntity);
         
